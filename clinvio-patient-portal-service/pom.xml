@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.clinvio.co</groupId>
-	<artifactId>clinvio-doctor-portal-service</artifactId>
+	<artifactId>clinvio-patient-portal-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Clinvio Doctor Portal Service</name>
-	<description>Doctor portal service is a easy and accessible microservice for doctors to be able to registered them with Clinivo platform and manage their profile.</description>
+	<name>Clinvio Patient Portal Service</name>
+	<description>Patient portal service is a easy and accessible microservice for patients to be able to registered them with Clinivo platform and manage their profile.</description>
 	<properties>
 		<java.version>14</java.version>
 		<maven.compiler.release>11</maven.compiler.release>

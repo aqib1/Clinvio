@@ -1,4 +1,4 @@
-package com.portal.controllers;
+package com.doctor.portal.controllers;
 
 public class ManageProfileController {
 
