@@ -1,0 +1,82 @@
+openapi: 3.0.0
+info:
+  description: Doctors portal API designed by Clinvio
+  version: "1.0.0"
+  title: Doctor Portal API
+  contact:
+    email: aqibbutt3078@gmail.com
+  
+paths:
+  /doctor/register:
+    post:
+      tags:
+        - Registeration
+      summary: Call for requesting a new doctor profile
+      operationId: register
+      description: requesting a new profile for Clinvio
+      responses:
+        '200':
+          description: Item created
+        '400':
+          description: Invalid input, object invalid, Bad Request.
+        '409':
+          description: An existing profile already exists.
+        '417':
+          description: Expectation given in the request's Expect header could not be met.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DoctorProfileRequestModel'
+        description: Doctor profile request
+components:
+  schemas:
+    DoctorProfileRequestModel:
+      type: object
+      required:
+        - name
+        - gender
+        - dateOfBirth
+        - contactNumber
+        - email
+      properties:
+        name:
+          type: string
+          example: Dr Ahmad Ali
+        gender:
+          type: string
+          example: Male
+        dateOfBirth:
+          type: string
+          example: '1992-07-21'
+        contactNumber:
+          type: string
+          example: '+362008712'
+        email:
+          type: string
+          example: ahmad@gmail.com
+        profile:
+          type: string
+          example: Base64 profile image or path of profile uploaded in file system
+        pmdcNumber:
+          type: string
+          example: APPRNnTX-9
+        biography:
+          type: string
+          example: Short biography in the ‘notes’ section
+        paProfile:
+          type: object
+          $ref: '#/components/schemas/PAProfileRequestModel'
+          
+    PAProfileRequestModel:
+      type: object
+      required:
+          - name
+          - contactNumber
+      properties:
+          name:
+            type: string
+            example: Shahbaz Touqeer
+          contactNumber:
+            type: string
+            example: '+36142517676'

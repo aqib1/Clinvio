@@ -8,8 +8,9 @@
 	<name>Clinvio Doctor Portal Service</name>
 	<description>Doctor portal service is a easy and accessible microservice for doctors to be able to registered them with Clinivo platform and manage their profile.</description>
 	<properties>
-		<java.version>14</java.version>
+		<java.version>1.8</java.version>
 		<maven.compiler.release>11</maven.compiler.release>
+		<swagger.annotations.version>2.0.24</swagger.annotations.version>
 	</properties>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -37,7 +38,15 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>io.swagger.parser.v3</groupId>
+			<artifactId>swagger-parser</artifactId>
+			<version>${swagger.annotations.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -49,6 +58,34 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.openapitools</groupId>
+				<artifactId>openapi-generator-maven-plugin</artifactId>
+				<version>4.3.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>${project.basedir}/src/main/resources/api.yaml</inputSpec>
+							<generatorName>java</generatorName>
+							<generateApis>false</generateApis>
+							<generateModels>true</generateModels>
+							<generateModelDocumentation>false</generateModelDocumentation>
+							<generateModelTests>false</generateModelTests>
+							<generateSupportingFiles>false</generateSupportingFiles>
+							<modelPackage>com.doctor.portal.model</modelPackage>
+							<configOptions>
+								<sourceFolder>swagger</sourceFolder>
+							</configOptions>
+							<output>target/generated-sources</output>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
 		</plugins>
 	</build>
 </project>

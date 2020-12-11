@@ -21,6 +21,8 @@ public class DoctorProfileEntity extends BaseEntity {
 
 	private String gender;
 
+	private String contactNumber;
+	
 	private String dateOfBirth;
 
 	private int age;
@@ -59,6 +61,14 @@ public class DoctorProfileEntity extends BaseEntity {
 		this.name = name;
 	}
 
+	public void setContactNumber(String contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+	
+	public String getContactNumber() {
+		return contactNumber;
+	}
+	
 	public String getEmail() {
 		return email;
 	}
