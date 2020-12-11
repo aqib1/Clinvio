@@ -1,6 +1,8 @@
 package com.doctor.portal.entities;
 
-public class PAProfileEntity {
+import com.doctor.portal.data.BaseEntity;
+
+public class PAProfileEntity extends BaseEntity {
 
 	private int id;
 	

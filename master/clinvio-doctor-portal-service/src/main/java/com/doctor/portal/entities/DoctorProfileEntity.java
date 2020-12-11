@@ -1,6 +1,19 @@
 package com.doctor.portal.entities;
 
-public class DoctorProfileEntity {
+import com.doctor.portal.data.BaseEntity;
+
+/**
+ * <p>
+ * This class contains all the informations of doctor profile which is approved by support.
+ * Doctor profile entity will hold all the information about doctor, and his/her PA, also 
+ * facilitate system about the status of working.
+ * </p>
+ * 
+ * @author AQIB JAVED
+ * @since 11/12/2020
+ * @version 1.0
+ */
+public class DoctorProfileEntity extends BaseEntity {
 
 	private int id;
 
@@ -23,7 +36,7 @@ public class DoctorProfileEntity {
 	private String pmdcNumber;
 
 	private String biography;
-	
+
 	private PAProfileEntity paProfile;
 
 	public DoctorProfileEntity() {
@@ -121,7 +134,7 @@ public class DoctorProfileEntity {
 	public PAProfileEntity getPaProfile() {
 		return paProfile;
 	}
-	
+
 	public void setPaProfile(PAProfileEntity paProfile) {
 		this.paProfile = paProfile;
 	}
