@@ -1,20 +1,33 @@
 package com.doctor.portal.entities;
 
+import static com.doctor.portal.utils.AppConst.DOCTOR_PROFILE_TABLE_NAME;
+
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import com.doctor.portal.data.BaseEntity;
 
 /**
  * <p>
- * This class contains all the informations of doctor profile which is approved by support.
- * Doctor profile entity will hold all the information about doctor, and his/her PA, also 
- * facilitate system about the status of working.
+ * This class contains all the informations of doctor profile which is approved
+ * by support. Doctor profile entity will hold all the information about doctor,
+ * and his/her PA, also facilitate system about the status of working.
  * </p>
  * 
  * @author AQIB JAVED
  * @since 11/12/2020
  * @version 1.0
  */
+
+@Entity(name = DOCTOR_PROFILE_TABLE_NAME)
 public class DoctorProfileEntity extends BaseEntity {
 
+	@Id
+	@GeneratedValue
+	@Column(name = "ID")
 	private int id;
 
 	private String name;
@@ -22,7 +35,7 @@ public class DoctorProfileEntity extends BaseEntity {
 	private String gender;
 
 	private String contactNumber;
-	
+
 	private String dateOfBirth;
 
 	private int age;
@@ -40,6 +53,8 @@ public class DoctorProfileEntity extends BaseEntity {
 	private String biography;
 
 	private PAProfileEntity paProfile;
+
+	private boolean isActive;
 
 	public DoctorProfileEntity() {
 
@@ -64,11 +79,11 @@ public class DoctorProfileEntity extends BaseEntity {
 	public void setContactNumber(String contactNumber) {
 		this.contactNumber = contactNumber;
 	}
-	
+
 	public String getContactNumber() {
 		return contactNumber;
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
@@ -147,5 +162,13 @@ public class DoctorProfileEntity extends BaseEntity {
 
 	public void setPaProfile(PAProfileEntity paProfile) {
 		this.paProfile = paProfile;
+	}
+
+	public boolean isActive() {
+		return isActive;
+	}
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
 	}
 }
