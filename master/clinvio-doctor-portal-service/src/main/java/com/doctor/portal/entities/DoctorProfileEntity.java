@@ -2,13 +2,14 @@ package com.doctor.portal.entities;
 
 import static com.doctor.portal.utils.AppConst.DOCTOR_PROFILE_TABLE_NAME;
 
-import javax.annotation.Generated;
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import com.doctor.portal.data.BaseEntity;
+import com.doctor.portal.utils.Gender;
 
 /**
  * <p>
@@ -21,7 +22,6 @@ import com.doctor.portal.data.BaseEntity;
  * @since 11/12/2020
  * @version 1.0
  */
-
 @Entity(name = DOCTOR_PROFILE_TABLE_NAME)
 public class DoctorProfileEntity extends BaseEntity {
 
@@ -30,30 +30,43 @@ public class DoctorProfileEntity extends BaseEntity {
 	@Column(name = "ID")
 	private int id;
 
+	@Column(name = "NAME")
 	private String name;
 
-	private String gender;
-
+	@Column(name = "GENDER")
+	private Gender gender;
+	
+	@Column(name = "CONTACT_NUMBER")
 	private String contactNumber;
 
+	@Column(name = "DATE_OF_BIRTH")
 	private String dateOfBirth;
 
+	@Column(name = "AGE")
 	private int age;
 
+	@Column(name = "EMAIL")
 	private String email;
 
+	@Column(name = "PROFILE")
 	private String profile;
 
+	@Column(name = "ACCESS_URL")
 	private String accessUrl;
 
+	@Column(name = "PASSWORD")
 	private String password;
 
+	@Column(name = "PMDC_NUMBER")
 	private String pmdcNumber;
 
+	@Column(name = "BIOGRAPHY")
 	private String biography;
 
+	@Embedded
 	private PAProfileEntity paProfile;
 
+	@Column(name = "ACTIVE")
 	private boolean isActive;
 
 	public DoctorProfileEntity() {
@@ -92,11 +105,11 @@ public class DoctorProfileEntity extends BaseEntity {
 		this.email = email;
 	}
 
-	public String getGender() {
+	public Gender getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 

@@ -1,25 +1,28 @@
 package com.doctor.portal.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import com.doctor.portal.data.BaseEntity;
 
+/**
+ * <p>
+ * This is a embeddable class for doctor personal assistant details
+ * </p>
+ * 
+ * @author AQIB JAVED
+ * @since 14/12/2020
+ * @version 1.0
+ */
+@Embeddable
 public class PAProfileEntity extends BaseEntity {
 
-	private int id;
-	
+	@Column(name = "PA_NAME")
 	private String name;
-	
+
+	@Column(name = "CONTACT_NUMBER")
 	private String contactNumber;
-	
+
 	public PAProfileEntity() {
-	
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getName() {
@@ -37,5 +40,5 @@ public class PAProfileEntity extends BaseEntity {
 	public void setContactNumber(String contactNumber) {
 		this.contactNumber = contactNumber;
 	}
-	
+
 }
