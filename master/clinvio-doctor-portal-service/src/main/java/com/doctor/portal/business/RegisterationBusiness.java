@@ -3,17 +3,23 @@ package com.doctor.portal.business;
 import java.util.Objects;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.doctor.portal.exceptions.InvalidRequestException;
+import com.doctor.portal.mapper.DoctorProfileEntityMapper;
 import com.doctor.portal.model.DoctorProfileRequestModel;
 import com.doctor.portal.model.DoctorProfileResponseModel;
 
 @Component
 public class RegisterationBusiness {
 	
+	@Autowired
+	private DoctorProfileEntityMapper mapper;
+	
 	public DoctorProfileResponseModel register(DoctorProfileRequestModel request) {
 		validateDoctorProfileModelRequest(request);
+		
 		return null;
 	}
 
