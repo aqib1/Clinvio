@@ -22,3 +22,7 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /.metadata/
+master/clinvio-doctor-portal-service/.classpath
+master/clinvio-patient-portal-service/.settings/
+master/clinvio-patient-portal-service/.classpath
+master/clinvio-doctor-portal-service/.settings/
