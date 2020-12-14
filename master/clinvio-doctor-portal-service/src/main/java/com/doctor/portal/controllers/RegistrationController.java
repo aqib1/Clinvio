@@ -6,7 +6,7 @@ import static com.doctor.portal.utils.AppConst.REGISTERATION_URL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +21,7 @@ public class RegistrationController {
 	@Autowired
 	private RegisterationBusiness business;
 	
-	@GetMapping(REGISTERATION_URL)
+	@PostMapping(REGISTERATION_URL)
 	public ResponseEntity<ProfileResponseModel> register(ProfileRequestModel request) {		
 		return new ResponseEntity<>(business.register(request), HttpStatus.OK);
 	}
