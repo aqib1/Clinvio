@@ -11,7 +11,7 @@ public class AppUtils {
 		
 	}
 	
-	//get age from date of birth with format yyyy-dd-mm
+	//get age from date of birth with format yyyy-mm-dd
 	public static int getAgeByDate(String dateOfBirth) {
 		return Period.between(LocalDate.parse(dateOfBirth), LocalDate.now()).getYears();
 	}

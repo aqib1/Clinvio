@@ -19,7 +19,7 @@ public class PAProfileEntity extends BaseEntity {
 	@Column(name = "PA_NAME")
 	private String name;
 
-	@Column(name = "CONTACT_NUMBER")
+	@Column(name = "PA_CONTACT_NUMBER")
 	private String contactNumber;
 
 	public PAProfileEntity() {

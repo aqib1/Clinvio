@@ -2,6 +2,7 @@ package com.doctor.portal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 /**
  * <p>
  * This is the main class for starting doctor portal service
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version 1.0
  */
 @SpringBootApplication
+@EnableJpaRepositories
 public class DoctorPortalServiceApplication {
 
 	public static void main(String[] args) {
