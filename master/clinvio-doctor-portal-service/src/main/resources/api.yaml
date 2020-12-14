@@ -20,7 +20,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/DoctorProfileResponseModel'
+                $ref: '#/components/schemas/ProfileResponseModel'
         '400':
           description: Invalid input, object invalid, Bad Request.
           content:
@@ -43,11 +43,11 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/DoctorProfileRequestModel'
+              $ref: '#/components/schemas/ProfileRequestModel'
         description: Doctor profile request
 components:
   schemas:
-    DoctorProfileRequestModel:
+    ProfileRequestModel:
       type: object
       required:
         - name
@@ -96,7 +96,7 @@ components:
           contactNumber:
             type: string
             example: '+36142517676'
-    DoctorProfileResponseModel:
+    ProfileResponseModel:
       type: object
       properties:
         successCode:

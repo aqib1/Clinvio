@@ -1,7 +1,5 @@
 package com.doctor.portal.entities;
 
-import static com.doctor.portal.utils.AppConst.DOCTOR_PROFILE_TABLE_NAME;
-
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -23,8 +21,8 @@ import com.doctor.portal.utils.Gender;
  * @since 11/12/2020
  * @version 1.0
  */
-@Entity(name = DOCTOR_PROFILE_TABLE_NAME)
-public class DoctorProfileEntity extends BaseEntity {
+@Entity(name = "DOCTORS_PROFILE")
+public class ProfileEntity extends BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -70,7 +68,7 @@ public class DoctorProfileEntity extends BaseEntity {
 	@Column(name = "ACTIVE")
 	private boolean isActive;
 
-	public DoctorProfileEntity() {
+	public ProfileEntity() {
 
 	}
 

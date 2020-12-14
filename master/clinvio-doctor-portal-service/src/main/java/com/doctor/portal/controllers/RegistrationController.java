@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.doctor.portal.business.RegisterationBusiness;
-import com.doctor.portal.model.DoctorProfileRequestModel;
-import com.doctor.portal.model.DoctorProfileResponseModel;
+import com.doctor.portal.model.ProfileRequestModel;
+import com.doctor.portal.model.ProfileResponseModel;
 
 @RestController
 @RequestMapping(DOCTOR_PORTAL_URL)
@@ -22,7 +22,7 @@ public class RegistrationController {
 	private RegisterationBusiness business;
 	
 	@GetMapping(REGISTERATION_URL)
-	public ResponseEntity<DoctorProfileResponseModel> register(DoctorProfileRequestModel request) {		
+	public ResponseEntity<ProfileResponseModel> register(ProfileRequestModel request) {		
 		return new ResponseEntity<>(business.register(request), HttpStatus.OK);
 	}
 }
