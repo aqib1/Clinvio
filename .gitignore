@@ -21,11 +21,19 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/.metadata/
+master/.metadata/
+
+# doctor service gitignore files
 master/clinvio-doctor-portal-service/.classpath
-master/clinvio-patient-portal-service/.settings/
-master/clinvio-patient-portal-service/.classpath
 master/clinvio-doctor-portal-service/.settings/
-master/clinvio-doctor-portal-service/.settings/org.eclipse.core.resources.prefs
-master/clinvio-doctor-portal-service/.settings/org.eclipse.core.resources.prefs
-master/clinvio-doctor-portal-service/.settings/org.eclipse.core.resources.prefs
+master/clinvio-doctor-portal-service/target/
+master/clinvio-doctor-portal-service/.apt_generated/
+master/clinvio-doctor-portal-service/.apt_generated_tests/
+
+
+# patient service gitignore files
+master/clinvio-patient-portal-service/.classpath
+master/clinvio-patient-portal-service/.settings/
+master/clinvio-patient-portal-service/target/
+master/clinvio-patient-portal-service/.apt_generated/
+master/clinvio-patient-portal-service/.apt_generated_tests/
