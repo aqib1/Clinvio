@@ -50,10 +50,10 @@ public class ProfileEntity extends BaseEntity {
 	@Column(name = "PROFILE")
 	private String profile;
 
-	@Column(name = "ACCESS_URL")
+	@Column(name = "ACCESS_URL", nullable = true)
 	private String accessUrl;
 
-	@Column(name = "PASSWORD")
+	@Column(name = "PASSWORD", nullable = true)
 	private String password;
 
 	@Column(name = "PMDC_NUMBER")

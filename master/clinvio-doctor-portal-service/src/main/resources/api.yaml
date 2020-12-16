@@ -55,6 +55,8 @@ components:
         - dateOfBirth
         - contactNumber
         - email
+        - pmdcNumber
+        - paProfile
       properties:
         name:
           type: string
