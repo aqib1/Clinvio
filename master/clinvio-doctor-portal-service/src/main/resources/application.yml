@@ -1,0 +1,8 @@
+spring:
+  application:
+     name: CLINVIO-DOCTOR-PORTAL-SERVICE
+  
+eureka:
+  client:
+     serviceUrl:
+        defaultZone: ${EUREKA_URI:${clinvio.discovery.server.defaultZone}}
