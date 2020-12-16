@@ -5,10 +5,10 @@ import org.springframework.stereotype.Service;
 
 import com.doctor.portal.entities.ProfileEntity;
 import com.doctor.portal.repositories.ProfileRepository;
-import com.doctor.portal.services.RegisterationService;
+import com.doctor.portal.services.RegistrationService;
 
 @Service
-public class RegisterationServiceImpl implements RegisterationService {
+public class RegistrationServiceImpl implements RegistrationService {
 
 	@Autowired
 	private ProfileRepository repository;

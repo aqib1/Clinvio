@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.doctor.portal.business.RegisterationBusiness;
+import com.doctor.portal.business.RegistrationBusiness;
 import com.doctor.portal.model.ProfileRequestModel;
 import com.doctor.portal.model.ProfileResponseModel;
 
@@ -21,7 +21,7 @@ import com.doctor.portal.model.ProfileResponseModel;
 public class RegistrationController {
 
 	@Autowired
-	private RegisterationBusiness business;
+	private RegistrationBusiness business;
 	
 	@PostMapping(REGISTERATION_URL)
 	public ResponseEntity<ProfileResponseModel> register(@RequestBody ProfileRequestModel request) {		

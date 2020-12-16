@@ -11,17 +11,17 @@ import com.doctor.portal.exceptions.InvalidRequestException;
 import com.doctor.portal.mapper.ProfileEntityMapper;
 import com.doctor.portal.model.ProfileRequestModel;
 import com.doctor.portal.model.ProfileResponseModel;
-import com.doctor.portal.services.Impl.RegisterationServiceImpl;
+import com.doctor.portal.services.Impl.RegistrationServiceImpl;
 import com.doctor.portal.utils.AppUtils;
 
 @Component
-public class RegisterationBusiness {
+public class RegistrationBusiness {
 
 	@Autowired
 	private ProfileEntityMapper mapper;
 
 	@Autowired
-	private RegisterationServiceImpl doctorRegisterationService;
+	private RegistrationServiceImpl doctorRegisterationService;
 
 	@Autowired
 	private Environment env;

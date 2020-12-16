@@ -7,8 +7,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @EnableEurekaServer
 @SpringBootApplication
-public class ClinvioDscoveryServer {
+public class ClinvioDiscoveryServer {
 	public static void main(String[] args) {
-		SpringApplication.run(ClinvioDscoveryServer.class, args);
+		SpringApplication.run(ClinvioDiscoveryServer.class, args);
 	}
 }

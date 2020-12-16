@@ -1,0 +1,109 @@
+openapi: 3.0.0
+info:
+  description: Doctors portal API designed by Clinvio
+  version: "1.0.0"
+  title: Doctor Portal API
+  contact:
+    email: aqibbutt3078@gmail.com
+  
+paths:
+  /support/requests:
+    get:
+      tags:
+        - Registeration Requests
+      summary: Call for get all doctor registeration requests
+      operationId: registerationRequests
+      description: API for support to see all regiteration requests.
+      responses:
+        '200':
+          description: Item created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProfileResponseModel'
+        '400':
+          description: Invalid input, object invalid, Bad Request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseError'
+        '409':
+          description: An existing profile already exists.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseError'
+        '417':
+          description: Expectation given in the request's Expect header could not be met.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResponseError'
+    
+components:
+  schemas:
+    ProfileResponseModel:
+      type: object
+      required:
+        - name
+        - gender
+        - dateOfBirth
+        - contactNumber
+        - email
+        - pmdcNumber
+        - biography
+        - paProfile
+      properties:
+        name:
+          type: string
+          example: Dr Ahmad Ali
+        gender:
+          type: string
+          example: Male
+        dateOfBirth:
+          type: string
+          example: '1992-07-21'
+        contactNumber:
+          type: string
+          example: '+362008712'
+        email:
+          type: string
+          example: ahmad@gmail.com
+        profile:
+          type: string
+          example: Base64 profile image or path of profile uploaded in file system
+        pmdcNumber:
+          type: string
+          example: APPRNnTX-9
+        biography:
+          type: string
+          example: Short biography in the ‘notes’ section
+        paProfile:
+          type: object
+          $ref: '#/components/schemas/PAProfileRequestModel'
+          
+    PAProfileRequestModel:
+      type: object
+      required:
+          - name
+          - contactNumber
+      properties:
+          name:
+            type: string
+            example: Shahbaz Touqeer
+          contactNumber:
+            type: string
+            example: '+36142517676'
+    ResponseError:
+      type: object
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        detailedMessage:
+          type: string
+        exceptionName:
+          type: string
+        createdAt:
+          type: string
