@@ -1,7 +1,8 @@
 package com.doctor.portal.services;
 
-import com.doctor.portal.entities.ProfileEntity;
+import com.doctor.portal.documents.ProfileDocument;
+import reactor.core.publisher.Mono;
 
 public interface RegistrationService {
-	void insert(ProfileEntity profile);
+	Mono<ProfileDocument> save(ProfileDocument profile);
 }

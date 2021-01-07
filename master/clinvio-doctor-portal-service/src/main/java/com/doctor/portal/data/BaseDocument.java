@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  * @version 1.0
  */
 
-public abstract class BaseEntity {
+public abstract class BaseDocument {
 
 	@Override
 	public int hashCode() {

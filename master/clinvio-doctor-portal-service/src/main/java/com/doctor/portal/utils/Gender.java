@@ -1,4 +1,7 @@
 package com.doctor.portal.utils;
+
+import lombok.Getter;
+
 /**
  * <p>
  * Enum type for gender types
@@ -9,15 +12,5 @@ package com.doctor.portal.utils;
  * @version 1.0
  */
 public enum Gender {
-	MALE("M"), FEMALE("F"), OTHER("O");
-
-	private String code;
-
-	private Gender(String code) {
-		this.code = code;
-	}
-
-	public String getCode() {
-		return code;
-	}
+	MALE, FEMALE, OTHER
 }

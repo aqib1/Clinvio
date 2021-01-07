@@ -1,9 +1,9 @@
 package com.doctor.portal.repositories;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.doctor.portal.entities.ProfileEntity;
+import com.doctor.portal.documents.ProfileDocument;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
-public interface ProfileRepository extends JpaRepository<ProfileEntity, Integer> {
+public interface ProfileRepository extends ReactiveMongoRepository<ProfileDocument, String> {
 	
 }

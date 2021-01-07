@@ -3,7 +3,7 @@ package com.doctor.portal;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
 /**
  * <p>
  * This is the main class for starting doctor portal service
@@ -14,7 +14,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * @version 1.0
  */
 @SpringBootApplication
-@EnableJpaRepositories
 @EnableEurekaClient
 public class DoctorPortalServiceApplication {
 

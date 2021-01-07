@@ -8,9 +8,9 @@
 	<description>This project contains microservices for helping support team to allow them do their necessary operations.</description>
 	<parent>
 		<groupId>com.clinvio.co</groupId>
-		<artifactId>clinvio-parent-pom</artifactId>
+		<artifactId>clinvio-reactive-parent-pom</artifactId>
 		<version>0.0.1.RELEASE</version>
-		<relativePath>../clinvio-parent-pom/pom.xml</relativePath> <!-- lookup parent from repository -->
+		<relativePath>../clinvio-reactive-parent-pom/pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 
 	<build>
